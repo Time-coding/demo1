@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bijia.css">
+    <title>比价搜索</title>
+</head>
+<body>
+    <!--头部-->
+    <header id="header">
+        <a href="index.html" class="logo pull-left">
+            <img src="images/header_logo.png" alt="">
+        </a>
+        <a href="index.html" class="download_app pull-right">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </header>
+    <!--搜索-->
+    <section id="search">
+        <form action="" id="search_product">
+            <div class="s_input">
+                <input type="text" placeholder="请输入你想要输入的商品">
+            </div>
+            <a href="#">搜索</a>
+        </form>
+    </section>
+    <!--数据列表-->
+    <section id="bijia_menu">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <!--需要js动态渲染-->
+        </div>
+    </section>
+    <!--页脚0-->
+    <footer id="footer">
+        <div class="row">
+            <div class="col-xs-4"><a href="">登录</a></div>
+            <div class="col-xs-4"><a href="">注册</a></div>
+            <div class="col-xs-4"><img  class="arrows" src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</div>
+        </div>
+        <div class="">
+          <a href="#">手机APP下载</a>
+          <span>慢慢买手机版</span>
+          <span> -- 掌上比价平台</span>
+          <p> m.manmanbuy.com</p>
+        </div>
+    </footer>
+</body>
+<script type="text/template" id="bijia_source">
+    {{each result as item index}}
+        <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <!--根据js需求，动态添加自定义属性，方便在js中操作---
+                        -----动态设置href中，使下拉菜单与上边大标题建立联系（通过index）-->
+                        <a role="button" data-toggle="collapse" data-titleid="{{item.titleId}}" data-parent="#accordion" href="#collapseOne{{index}}" aria-expanded="true" aria-controls="collapseOne">
+                        {{item.title}}
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne{{index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                       <div class="row">
+                           <!--每个大标题下菜单不同，需要js的动态渲染-->
+                       </div>
+                    </div>
+                </div>
+            </div>
+    {{/each}}
+</script>
+<!--下面相对应的菜单列表-->
+<script type="text/template" id="columns">
+        {{each result as item index}}
+            <div class="col-xs-4"><a href="productList.html?categoryid={{item.categoryId}} "> {{ #item.category }} </a></div>
+        {{/each}}
+</script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/category.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+
+</html>

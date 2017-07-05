@@ -1,0 +1,123 @@
+@import 'base.less';
+
+
+// 头部
+#header{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(255, 132, 29);
+    .logo{
+        img{
+            width: 200px;
+        }
+        padding:10px;
+    }
+    .download_app{ 
+        color:#fff;
+         img{
+            height: 30px;
+        }
+        padding:10px;
+    }
+}
+//搜索
+#search{
+    width: 100%;
+    padding:10px;
+    height: 50px;
+    background-color: #fff;
+   
+    #search_product{
+        padding-right:80px;
+        height: 30px;
+         position: relative;
+        .s_input{
+            input{ 
+                width: 100%;
+                 font-size: 12px;
+                border: 0;
+                height: 30px;
+                border-radius:20px;
+                background-color: rgb(241, 241, 241);
+                text-indent: 20px;
+          }
+        }
+       
+        a{
+            display: inline-block;
+            background: rgb(255, 132, 29);
+            border-radius: 20px;
+            text-align: center; 
+            width: 60px;
+            height: 30px;
+            line-height: 30px;
+            border:1px solid #ccc;
+            color:#fff;
+            position: absolute;
+            right:0px;
+            top:0px;
+
+        }
+    }
+}
+//数据菜单
+#bijia_menu{
+    padding-top:8px;
+    padding-bottom:10px;
+    margin:0px 5px;
+    
+    #accordion{
+        border:1px solid #ccc;
+        border-radius: 5px;
+      .panel-default{
+          border-radius: 5px;
+          margin-top: 0px;
+          border-bottom: 1px solid #ccc;
+        .panel-heading{
+            background: #EDEDED;
+            a{
+                display: block;
+                text-decoration: none;
+                font-size:16px;
+                font-weight: bold;
+                background: url("../images/arrow1.gif") no-repeat right center;
+            }
+        }
+        .panel-body{
+            background: #F9F9F9;
+            padding: 0px;
+            .row{
+                margin:0px;
+                >div{
+                    padding: 10px 0;
+                    text-align: center;
+                    border-right: 1px solid #ccc;
+                    border-bottom: 1px solid #ccc;
+                }
+            }
+        }
+      } 
+   }  
+}
+//页脚
+#footer{
+    height: 100px;
+    text-align: center;
+    .row{
+        >div{
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-left: 0px;
+            text-align: center;
+            &:last-child{
+                height: 42px;
+                img{
+                    display:inline-block;
+                     width: 12px;
+                    // vertical-align: top;
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>maimaimai</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!--头部-->
+    <header id="header">
+        <a href="index.html" class="logo pull-left">
+            <img src="images/header_logo.png" alt="">
+        </a>
+        <a href="index.html" class="download_app pull-right">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </header>
+    <!--搜索-->
+    <section id="search">
+        <form action="" id="search_product">
+            <div class="s_input">
+                <input type="text" placeholder="请输入你想要输入的商品">
+            </div>
+            <a href="#">搜索</a>
+        </form>
+    </section>
+    <!--菜单-->
+    <nav id="nav_menu">
+        <div class="row">
+            <!--js动态渲染-->
+        </div>
+    </nav>
+    <!--超值折扣-->
+    <section id="low_price">
+        <h5>超值折扣推荐</h5>
+        <a href="#">
+            <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+        </a>
+
+    </section>
+    <!--商品列表-->
+    <section id="product_list">
+        <div class="list_container">
+            <!--js动态渲染-->
+        </div>
+         <div class="more_discount">
+            <a href=""><p>更多优惠信息 »</p></a>
+        </div>
+    </section>
+    <!--品牌排行-->
+    <section id="tending_brand">
+        <h5>品牌排行</h5>
+         <a href="#">
+            <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+         </a>
+    </section>
+    <!--页脚0-->
+    <footer id="footer">
+        <div class="row">
+            <div class="col-xs-4"><a href="">登录</a></div>
+            <div class="col-xs-4"><a href="">注册</a></div>
+            <div class="col-xs-4"><img  class="arrows" src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</div>
+        </div>
+        <div class="">
+          <a href="#">手机APP下载</a>
+          <span>慢慢买手机版</span>
+          <span> -- 掌上比价平台</span>
+          <p> m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+
+
+</body>
+<!--商品菜单模板渲染-->
+<script type="text/template" id="menu">
+    {{each result as item index }}
+     <div class="col-xs-3">
+                <!--动态渲染href地址，注意html命名规范-->
+                <a href="{{item.titlehref}}">
+                    {{#item.img}}
+                </a>
+                <p>{{item.name}}</p>
+            </div>
+    {{/each}}
+</script>
+<!--商品列表模板渲染-->
+<script type="text/template" id="low_price_list">
+        {{each result as item index}}
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                       {{#item.productImgSm}}
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h5 class="media-heading">{{item.productName}}<span class="price">{{item.productPinkage}}</span></h5>
+                    <div class="info">
+                        <p>{{item.productFrom}} | {{item.productTime}}</p>
+                        <span>
+                            <i></i>{{item.productComCount}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="js/index.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+</html>

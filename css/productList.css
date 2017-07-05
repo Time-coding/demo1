@@ -1,0 +1,187 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: #EFEFEF;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+}
+input,
+select,
+button {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+img {
+  display: block;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+#header {
+  width: 100%;
+  height: 50px;
+  background-color: #ff841d;
+}
+#header .logo {
+  padding: 10px;
+}
+#header .logo img {
+  width: 200px;
+}
+#header .download_app {
+  color: #fff;
+  padding: 10px;
+}
+#header .download_app img {
+  height: 30px;
+}
+#search {
+  width: 100%;
+  padding: 10px;
+  height: 50px;
+  background-color: #fff;
+}
+#search #search_product {
+  padding-right: 80px;
+  height: 30px;
+  position: relative;
+}
+#search #search_product .s_input input {
+  width: 100%;
+  font-size: 12px;
+  border: 0;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #f1f1f1;
+  text-indent: 20px;
+}
+#search #search_product a {
+  display: inline-block;
+  background: #ff841d;
+  border-radius: 20px;
+  text-align: center;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #ccc;
+  color: #fff;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+#product_search {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+#product_search .breadcrumb {
+  margin: 0px;
+}
+#product_search .breadcrumb li:before {
+  content: '';
+  padding: 0px;
+}
+#product_search .breadcrumb li:after {
+  content: '＞';
+}
+#product_search .breadcrumb li > a {
+  text-decoration: none;
+}
+#product_search > a {
+  position: absolute;
+  top: 4px;
+  right: 10px;
+  text-decoration: none;
+  padding: 3px 10px ;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #E6E6E6;
+}
+#videoview {
+  background-color: #fff;
+  padding-top: 10px;
+}
+#videoview > a {
+  display: block;
+}
+#videoview > a .media {
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+#videoview > a .media .media-left img {
+  width: 100px;
+}
+#videoview > a .media .media-body > p {
+  color: red;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-size: 16px;
+}
+#pagination {
+  position: relative;
+  padding-top: 10px;
+  background: #fff;
+  margin-bottom: 20px;
+}
+#pagination .dropdown {
+  text-align: center;
+}
+#pagination .dropdown .btn-default {
+  width: 50px;
+}
+#pagination .dropdown .dropdown-menu {
+  padding: 0px;
+  margin: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 50px;
+  width: 50px;
+}
+#pagination .dropdown .dropdown-menu li {
+  border-bottom: 1px solid #ccc;
+}
+#pagination .dropdown .dropdown-menu li a {
+  padding: 5px 14px;
+}
+#pagination .prev {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+#pagination .next {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+#footer {
+  height: 100px;
+  text-align: center;
+}
+#footer .row > div {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-left: 0px;
+  text-align: center;
+}
+#footer .row > div:last-child {
+  height: 42px;
+}
+#footer .row > div:last-child img {
+  display: inline-block;
+  width: 12px;
+}

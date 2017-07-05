@@ -1,0 +1,140 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: #EFEFEF;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+}
+input,
+select,
+button {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+img {
+  display: block;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+#header {
+  width: 100%;
+  height: 50px;
+  background-color: #ff841d;
+}
+#header .logo {
+  padding: 10px;
+}
+#header .logo img {
+  width: 200px;
+}
+#header .download_app {
+  color: #fff;
+  padding: 10px;
+}
+#header .download_app img {
+  height: 30px;
+}
+#search {
+  width: 100%;
+  padding: 10px;
+  height: 50px;
+  background-color: #fff;
+}
+#search #search_product {
+  padding-right: 80px;
+  height: 30px;
+  position: relative;
+}
+#search #search_product .s_input input {
+  width: 100%;
+  font-size: 12px;
+  border: 0;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #f1f1f1;
+  text-indent: 20px;
+}
+#search #search_product a {
+  display: inline-block;
+  background: #ff841d;
+  border-radius: 20px;
+  text-align: center;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #ccc;
+  color: #fff;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+#bijia_menu {
+  padding-top: 8px;
+  padding-bottom: 10px;
+  margin: 0px 5px;
+}
+#bijia_menu #accordion {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#bijia_menu #accordion .panel-default {
+  border-radius: 5px;
+  margin-top: 0px;
+  border-bottom: 1px solid #ccc;
+}
+#bijia_menu #accordion .panel-default .panel-heading {
+  background: #EDEDED;
+}
+#bijia_menu #accordion .panel-default .panel-heading a {
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  background: url("../images/arrow1.gif") no-repeat right center;
+}
+#bijia_menu #accordion .panel-default .panel-body {
+  background: #F9F9F9;
+  padding: 0px;
+}
+#bijia_menu #accordion .panel-default .panel-body .row {
+  margin: 0px;
+}
+#bijia_menu #accordion .panel-default .panel-body .row > div {
+  padding: 10px 0;
+  text-align: center;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+#footer {
+  height: 100px;
+  text-align: center;
+}
+#footer .row > div {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-left: 0px;
+  text-align: center;
+}
+#footer .row > div:last-child {
+  height: 42px;
+}
+#footer .row > div:last-child img {
+  display: inline-block;
+  width: 12px;
+}

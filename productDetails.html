@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1,minimum-scale=1,user-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/productDetails.css">
+    <title>商品详情</title>
+</head>
+
+<body>
+    <!--头部-->
+    <header id="header">
+        <a href="index.html" class="logo pull-left">
+            <img src="images/header_logo.png" alt="">
+        </a>
+        <a href="index.html" class="download_app pull-right">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </header>
+    <!--搜索-->
+    <section id="search">
+        <form action="" id="search_product">
+            <div class="s_input">
+                <input type="text" placeholder="请输入你想要输入的商品">
+            </div>
+            <a href="#">搜索</a>
+        </form>
+    </section>
+    <!--导航条-->
+    <section id="product_search">
+        <ol class="breadcrumb">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="productList.html?categoryid=0">电视</a></li>
+            <li class="active">电视</li>
+        </ol>
+        <a href="#">筛选</a>
+    </section>
+    <!--商品详情-->
+    <section id="details">
+       <!--js动态渲染-->
+    </section>
+    <!--参数说明-->
+    <section id="parameters">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" >比价购买</a></li>
+            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">产品参数</a></li>
+            <li role="presentation"  class="active"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">优选评价</a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane" id="home">
+                <table width= "100%">
+                   <!--js动态渲染-->
+                </table>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="profile">你好</div>
+            <div role="tabpanel" class="tab-pane active" id="messages">
+                <!--js动态渲染-->
+            </div>
+        </div>
+
+    </section>
+    <!--页脚-->
+    <footer id="footer">
+        <div class="row">
+            <div class="col-xs-4"><a href="">登录</a></div>
+            <div class="col-xs-4"><a href="">注册</a></div>
+            <div class="col-xs-4"><img class="arrows" src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</div>
+        </div>
+        <div class="">
+            <a href="#">手机APP下载</a>
+            <span>慢慢买手机版</span>
+            <span> -- 掌上比价平台</span>
+            <p> m.manmanbuy.com</p>
+        </div>
+    </footer>
+</body>
+<!--乐视图片模板-->
+<script type="text/template" id="leshi">
+    {{each result as item index}}
+    <div class="de_img">
+        {{#item.productImg}}
+    </div>
+    <div class="de_title">
+        {{item.productName}}
+    </div>
+    <div class="de_info clearfix">
+        <span class="de_info_left">当前最低¥4255.00<!--js动态渲染--> </span>
+        <span class="de_info_right">333<!--js动态渲染--></span>
+    </div>
+    {{/each}}
+</script>
+<!--乐视比价模板-->
+<script type="text/template" id='bjshop'>
+    {{each result as item index}}
+    <div>
+        {{#item.bjShop}}
+    </div>
+    {{/each}}
+</script>
+<!--评论模板-->
+<script type="text/template" id='discuss'>
+    {{each result as item index}}
+    <div class="mes_title clearfix">
+        <span class="name">{{item.comName}}</span>
+        <span class="time">{{item.comTime}}</span>
+    </div>
+    <p>{{item.comFrom}}</p>
+    <div name="" id="mes_dis" cols="30" rows="10">
+        {{item.comContent}}
+    </div>
+    {{/each}}
+</script>
+<script src="lib/jquery/jquery.min.js"></script>
+<!--自己封装的小插件，用于bootstrap分页切换Togglabletabs.js-->
+<script src="js/Togglabletabs.js"></script>
+<script src="js/productDetails.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+
+</html>

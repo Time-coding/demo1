@@ -1,0 +1,177 @@
+@import "base.less";
+// 头部
+#header{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(255, 132, 29);
+    .logo{
+        img{
+            width: 200px;
+        }
+        padding:10px;
+    }
+    .download_app{ 
+        color:#fff;
+         img{
+            height: 30px;
+        }
+        padding:10px;
+    }
+}
+//搜索
+#search{
+    width: 100%;
+    padding:10px;
+    height: 50px;
+    background-color: #fff;
+   
+    #search_product{
+        padding-right:80px;
+        height: 30px;
+         position: relative;
+        .s_input{
+            input{ 
+                width: 100%;
+                 font-size: 12px;
+                border: 0;
+                height: 30px;
+                border-radius:20px;
+                background-color: rgb(241, 241, 241);
+                text-indent: 20px;
+          }
+        } 
+       
+        a{
+            display: inline-block;
+            background: rgb(255, 132, 29);
+            border-radius: 20px;
+            text-align: center; 
+            width: 60px;
+            height: 30px;
+            line-height: 30px;
+            border:1px solid #ccc;
+            color:#fff;
+            position: absolute;
+            right:0px;
+            top:0px;
+
+        }
+    }
+}
+//路劲导航
+#product_search{
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    position: relative;
+    .breadcrumb{
+        margin: 0px;
+        li{
+            &:before{
+                content:'';
+                padding:0px;
+            }
+            &:after{
+                content:'＞';
+            }
+            >a{
+                text-decoration:none;
+            }
+        }
+    }
+    >a{
+        position: absolute;
+        top:4px;
+        right:10px;
+        text-decoration: none;
+        
+        padding:3px 10px ;;
+        border:1px solid #ccc;
+        border-radius:5px;
+        background:#E6E6E6;
+    }
+}
+//商品列表
+#videoview{
+    background-color: #fff;
+        padding-top:10px;
+    >a{
+            display:block;
+            .media{
+                padding:5px;
+                border-bottom:1px solid #ccc;
+                .media-left{
+                    
+                        img{
+                            width: 100px;
+                        }
+                    
+                }
+                .media-body{
+                    >p{
+                        color:red;
+                        margin-top:10px;
+                        margin-bottom:0px;
+                        font-size:16px;
+                    }
+                }
+            }
+     }
+}
+//分页
+#pagination{
+        position: relative;
+        padding-top: 10px;
+        background: #fff;
+        margin-bottom: 20px;
+    .dropdown{
+        text-align: center;
+        .btn-default{
+            width: 50px;
+        }
+        .dropdown-menu{
+            padding: 0px;
+            margin: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 50px;
+            width: 50px;
+            li{
+                border-bottom: 1px solid #ccc;
+                a{
+                    padding:5px 14px;
+                }
+            }
+        }
+    } 
+    .prev{
+        position: absolute;
+        top:10px;
+        left: 10px;
+    }
+    .next{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    } 
+}
+// 页脚
+#footer{
+    height: 100px;
+    text-align: center;
+    .row{
+        >div{
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-left: 0px;
+            text-align: center;
+            &:last-child{
+                height: 42px;
+                img{
+                    display:inline-block;
+                     width: 12px;
+                    // vertical-align: top;
+                }
+            }
+        }
+    }
+}
